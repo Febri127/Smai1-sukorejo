@@ -14,7 +14,7 @@
         echo "<table class='table table-striped table-bordered'>
         <thead>
         <tr>
-            <th>No</th><th>Id Absen</th><th>Nis</th><th>Nama</th><th>Kelas</th><th>Jurusan</th><th>Opsi</th>
+            <th>No</th><th>Nis</th><th>Nama</th><th>Kelas</th><th>Jurusan</th><th>Opsi</th>
         </tr>
         </thead>
         <tbody>";
@@ -29,7 +29,6 @@
         while ($r = $q->fetch_array()) {
             echo "<tr>
             <td>" . $no . "</td>
-            <td>" . $r['kd_absen'] . "</td>
             <td>" . $r['npm'] . "</td>
             <td>" . $r['nama'] . "</td>
             <td>" . $r['kd_kelas'] . "</td>
