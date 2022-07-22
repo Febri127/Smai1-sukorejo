@@ -4,7 +4,6 @@ $opsi = $_GET['action'];
 //start input
 if ($opsi == "input") {
     $data = [
-        'kd_absen' => $_POST['kd_absen'],
         'npm' => $_POST['npm'],
         'nama' => $_POST['nama'],
         'kd_kelas' => $_POST['kd_kelas'],
@@ -31,7 +30,7 @@ if ($opsi == "input") {
 // start kondisi dalate
 elseif ($opsi == "delete")  {
     $where = [
-        'kd_absen' => $_GET['id']
+        'npm' => $_GET['id']
     ];
     $delete = __delete($db, "absen", $where);
     if ($delete) {
@@ -49,7 +48,6 @@ elseif ($opsi == "delete")  {
 elseif ($opsi == "update") {
     if (!empty($_POST['kd_kelas'])) {
         $data = [
-            'kd_absen' => $_POST['kd_absen'],
             'npm' => $_POST['npm'],
             'nama' => $_POST['nama'],
             'kd_kelas' => $_POST['kd_kelas'],
@@ -62,7 +60,6 @@ elseif ($opsi == "update") {
         ];
     } else {
         $data = [
-            'kd_absen' => $_POST['kd_absen'],
             'npm' => $_POST['npm'],
             'nama' => $_POST['nama'],
             'kd_kelas' => $_POST['kd_kelas'],
@@ -75,7 +72,7 @@ elseif ($opsi == "update") {
         ];
     }
     $where = [ 
-        'kd_absen' => $_POST['id']
+        'npm' => $_POST['id']
     ];
     $update =__update($db, "absen", $data, $where);
     if ($update) {

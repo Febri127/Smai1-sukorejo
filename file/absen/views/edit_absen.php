@@ -1,7 +1,7 @@
 <?php
 $db = __database();
 $where = [
-    'kd_absen' => $_GET['id']
+    'npm' => $_GET['id']
 ];
 $query = __ambil($db, "absen", "*", $where);
 // menampilkan hasil query bentuk object
@@ -17,21 +17,13 @@ $rows = $query->fetch_object();
     <div class="card-body">
         
         <form action="admin.php?target=absen&action=update" method="post" data-parseley-validate class="form-horizontal form-label-left">
-        <input type="hidden" name="id" value="<?php echo $rows->kd_absen; ?>">
+        <input type="hidden" name="id" value="<?php echo $rows->npm; ?>">
         <div class="mb-3">
         <label for="first-name" class="control-label col-md-3 col-sm-3 col-lg-12">
-                    Id
+                    NIs
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                <input type="text" name="kd_absen" id="" class="form-control" value="<?php echo $rows->kd_absen; ?>" />
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="first-name" class="control-label col-md-3 col-sm-3 col-lg-12">
-                    Nis
-                </label>
-                <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="text" name="npm" id="" class="form-control" value="<?php echo $rows->npm; ?>" />
+                <input type="text" name="npm" id="" class="form-control" value="<?php echo $rows->npm; ?>" />
                 </div>
             </div>
             <div class="mb-3">

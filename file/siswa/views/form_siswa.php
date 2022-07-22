@@ -9,18 +9,10 @@ $db = __database();
         <form action="admin.php?target=siswa&action=input" method="post" data-parsley-validate class="form-horizontal form-label-left">
         <div class="mb-3">
                 <label for="first-name" class="control-label col-md-3 col-sm-3 col-lg-12">
-                    Id
-                </label>
-                <div class="col-md-6 col-sm-6 col-lg-12">
-                <input type="text" name="kd_absen" id="" class="form-control" value="<?php echo $rows->kd_absen; ?>" />
-                </div>
-            </div>
-            <div class="mb-3">
-                <label class="control-label col-md3 col-sm-3 col-lg-12" for="first-name">
                     Nis
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="text" name="npm" class="form-control" id=""/>
+                <input type="text" name="npm" id="" class="form-control" value="<?php echo $rows->npm; ?>" />
                 </div>
             </div>
             <div class="mb-3">

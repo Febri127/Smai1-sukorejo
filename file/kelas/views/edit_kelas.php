@@ -1,63 +1,59 @@
-<?php
-$db = __database();
-$where = [
-    'kd_semester' => $_GET['id']
-];
-$query = __ambil($db, "semester", "*", $where);
-//menampilkan hasil query dalam bentuk object
-//anda bisa juga menggunakan mysql_fetch_assoc atau mysql_fetch_array dll
-
-$rows = $query->fetch_object();
-//ptint_r
-?>
 <div class="card">
     <div class="card-header">
-        <h4>Edit Member</h4>
+        <h4>edit Kelas</h4>
     </div>
     <div class="card-body">
-        <form action="admin.php?target=semester&action=update" data-parsley-validate class="form-horizontal form-label-left" method="post">
-            <input type="hidden" name="id" value="<?php echo $rows->kd_semester; ?>">
-            <div class="mb-3">
-                <label for="first-name" class="control-label col-md-3 col-sm-3 col-lg-12">
-                    Semester
+        <form method="post" action="admin.php?target=kelas&action=update" data-parsley-validate class="form-horizontal form-lebel-left">
+        <div class="mb-3">
+                <label class="control-label col-md-3 col-sm-3 col-lg-12" for="frist-name">
+                    ID
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="text" name="semester" class="form-control" value="<?php echo $rows->semester; ?>" />
+                    <input type="text" name="kd_kelas" class="form-control" value="<?php echo $rows->kd_kelas; ?>" />
                 </div>
             </div>
             <div class="mb-3">
-                <label for="first-name" class="control-label col-md-3 col-sm-3 col-lg-12">
+                <label class="control-label col-md-3 col-sm-3 col-lg-12" for="frist-name">
+                    Kelas
+                </label>
+                <div class="col-md-6 col-sm-6 col-lg-12">
+                    <input type="text" name="kelas" class="form-control" value="<?php echo $rows->kelas; ?>" />
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="control-label col-md-3 col-sm-3 col-lg-12" for="frist-name">
                     Sebaran
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
                     <div class="form-check">
-                        <input type="radio" class="form-check-input" name="sebaran_semester" id="sebaran_semester_ganjil" value="ganjil" <?php echo $rows->sebaran_semester == "ganjil" ? "checked" : ""; ?>>
-                        <label for="sebaran_semester_ganjil" class="form-check-label">
-                            Ganjil
+                        <input class="form-check-input" type="radio" name="sebaran_kelas" id="sebaran_kelas" value="ganjil">
+                        <label class="form-check-label" for="sebaran_kelas">
+                            A
                         </label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-check-input" name="sebaran_semester" id="sebaran_semeseter_genap" value="genap" <?php echo $rows->sebaran_semester == "genap" ? "checked" : ""; ?>>
-                        <label for="sebaran_semester_genap" class="form-check-label">
-                            Genap
+                        <input class="form-check-input" type="radio" name="sebaran_kelas" id="sebaran_kelas" value="genap">
+                        <label class="form-check-label" for="sebaran_kelas">
+                            B
                         </label>
                     </div>
                 </div>
             </div>
 
             <div class="mb-3">
-                <label for="frist-name" class="control-label col-md-3 col-sm-3 col-lg-12">
-                    Prodi
+                <label class="control-label col-md-3 col-sm-3 col-lg-12" for="frist-name">
+                    Jurusan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <select name="kd_prodi" id="kd_prodi" class="form-select">
-                        <option value="">Pilih Prodi</option>
+                    <select name="kd_jurusan" id="kd_jurusan" class="form-select">
+                        <option value="">Pilih jurusan</option>
                         <?php
-                        $prodi_data = __ambil($db, "prodi");
-                        while ($r = $prodi_data->fetch_array()) {
-                        ?>
-                            <option value="<?php echo $r['kd_prodi']; ?>" <?php echo $rows->kd_prodi == $r['kd_prodi'] ? "selected" : ""; ?>><?php echo $r['nama_prodi']; ?></option>
-                        <?php
+                        $db = __database();
+                        $jurusan_data = __ambil($db, "jurusan");
+                        while ($r = $jurusan_data->fetch_array()) {
+                            ?>
+                            <option value="<?php echo $r ['kd_jurusan'];?>"><?php echo $r['nama_jurusan'];?></option>
+                            <?php
                         }
                         ?>
                     </select>
@@ -65,10 +61,8 @@ $rows = $query->fetch_object();
             </div>
             <div class="mb-3">
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <button type="submit" class="btn btn-success btn-sm" id="simpan" name="simpan">
-                        <i class="fa-solid fa-floppy-disk"></i> Simpan
-                    </button>
-                    <a class="btn btn-danger btn-sm" href="admin.php?target=semester"><i class="fa-solid fa-circle-arrow-left"></i> Kembali</a>
+                    <input type="submit" class="btn btn-success btn-sm" value="Simpan">
+                    <a class="btn btn-danger btn-sm" href="admin.php?target=kelas">Kembali</a>
                 </div>
             </div>
         </form>

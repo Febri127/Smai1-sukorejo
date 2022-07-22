@@ -15,7 +15,7 @@
         echo "<table class='table table-striped table-bordered'>
         <thead>
         <tr>
-            <th>No</th><th>Id Absen</th><th>Nama</th><th>Kelas</th><th>Jurusan</th><th>Bulan</th><th>Hadir</th><th>Idzin</th><th>Alpha</th><th>Scor</th><th>Sangsi</th><th>Opsi</th>
+            <th>No</th><th>Nis</th><th>Nama</th><th>Kelas</th><th>Jurusan</th><th>Bulan</th><th>Hadir</th><th>Idzin</th><th>Alpha</th><th>Scor</th><th>Sangsi</th><th>Opsi</th>
         </tr>
         </thead>
         <tbody>";
@@ -34,7 +34,7 @@
             $total += $r['alpha'];
             echo "<tr>
             <td>" . $no . "</td>
-            <td>" . $r['kd_absen'] . "</td>
+            <td>" . $r['npm'] . "</td>
             <td>" . $r['nama'] . "</td>
             <td>" . $r['kd_kelas'] . "</td>
             <td>" . $r['kd_jurusan'] . "</td>
@@ -45,10 +45,10 @@
             <td>" . $r['alpha'] . "</td>
             <td>" . $r['idsanksi'] . "</td>
             <td>
-                <a class='btn btn-success btn-sm' href='admin.php?target=absen&action=edit&id=" . $r['kd_absen'] . "'>
+                <a class='btn btn-success btn-sm' href='admin.php?target=absen&action=edit&id=" . $r['npm'] . "'>
                     <i class='fa-solid fa-pen-to-square'></i>
                 </a>
-                <a class='btn btn-danger btn-sm' href='admin.php?target=absen&action=delete&id=" . $r['kd_absen'] . "'>
+                <a class='btn btn-danger btn-sm' href='admin.php?target=absen&action=delete&id=" . $r['npm'] . "'>
                     <i class='fa-solid fa-trash'></i>
                 </a>
             </td>
