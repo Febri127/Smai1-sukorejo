@@ -1,12 +1,12 @@
 <div class="card">
     <div class="card-header">
-        <h4>List Jurusan</h4>
+        <h4><i class="fa-solid fa-database"></i>List Jurusan</h4>
     </div>
     <div class="card-body">
         <?php
         $db = __database();
     //buat header table
-        echo "<a class ='btn btn-primary btn-sm' href='admin.php?target=jurusan&action=form'>Tambah</a><br><br>";
+        echo "<a class ='btn btn-primary btn-sm' href='admin.php?target=jurusan&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>";
         echo "<div class='table-responsive'>";
         echo "<table class='table table-striped table-bordered'>
         <thead>
@@ -24,8 +24,12 @@
             <td>" . $r['kd_jurusan'] ."</td>
             <td>" . $r['nama_jurusan'] ."</td>
             <td>
-                <a class='btn btn-success btn-sm' href='admin.php?target=jurusan&action=edit&id=" . $r['kd_jurusan'] . "'>Edit</a>
-                <a class='btn btn-danger btn-sm' href='admin.php?target=jurusan&action=delete&id=" . $r['kd_jurusan'] . "'>Hapus</a>
+                <a class='btn btn-success btn-sm' href='admin.php?target=jurusan&action=edit&id=" . $r['kd_jurusan'] . "'>
+                    <i class='fa-solid fa-pen-to-square'></i>
+                </a>
+                <a class='btn btn-danger btn-sm' href='admin.php?target=jurusan&action=delete&id=" . $r['kd_jurusan'] . "'>
+                    <i class='fa-solid fa-trash'></i>
+                </a>
             </td>
         </tr>";
             $no++;
