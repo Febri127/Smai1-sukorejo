@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h4>List Kelas</h4>
+        <h4><i class="fa-solid fa-database"></i>List Kelas</h4>
     </div>
     <div class="card-body">
         <?php
@@ -32,8 +32,12 @@
             <td>" . $r['sebaran_kelas'] . "</td>
             <td>" . $r['nama_jurusan'] . "</td>
             <td>
-            <a class='btn btn-success btn-sm' href='admin.php?target=kelas&action=edit&id=" . $r['kd_kelas'] ."'>Edit</a>
-            <a class='btn btn-danger btn-sm' href='admin.php?target=kelas&action=delete&id=" . $r['kd_kelas'] ."'>Hapus</a>
+            <a class='btn btn-success btn-sm' href='admin.php?target=kelas&action=edit&id=" . $r['kd_kelas'] ."'>
+                <i class='fa-solid fa-pen-to-square'></i>
+            </a>
+            <a class='btn btn-danger btn-sm' href='admin.php?target=kelas&action=delete&id=" . $r['kd_kelas'] ."'>
+                <i class='fa-solid fa-trash'></i>
+            </a>
             </td>
             </tr>";
             $no++;
