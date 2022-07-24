@@ -20,9 +20,7 @@
         <tbody>";
         //ambil data dari database
         $join = [
-            "LEFT JOIN jurusan as p on p.kd_jurusan=a.kd_jurusan",
-            "LEFT JOIN kelas as s on s.kd_kelas=a.kd_kelas",
-            "LEFT JOIN siswa as m on m.npm=a. npm"
+            "LEFT JOIN jurusan as p on p.kd_jurusan=s.kd_jurusan"
         ];
         $q = __ambil($db, "absen as a ORDER BY kd_kelas");
         $no = 1;
@@ -32,7 +30,7 @@
             <td>" . $r['npm'] . "</td>
             <td>" . $r['nama'] . "</td>
             <td>" . $r['kd_kelas'] . "</td>
-            <td>" . $r['kd_jurusan'] . "</td>
+            <td>" . $r['kd_jurusan'] . "</td>           
             <td>
                 <a class='btn btn-success btn-sm' href='admin.php?target=absen&action=edit&id=" . $r['kd_absen'] . "'>
                     <i class='fa-solid fa-pen-to-square'></i>
