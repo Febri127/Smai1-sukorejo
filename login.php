@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<img class="wave" src="images/user/wave.png">
+	<img class="SMAI" src="images/user/SMAI.png">
 	<div class="container">
 		<div class="img">
 			<img src="images/user/bg.svg">
