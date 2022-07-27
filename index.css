@@ -103,7 +103,7 @@
 .main-pages{
     position: relative;
     top: 50px;
-    margin-left: 140px;
+    margin-left: 150px;
     height: auto;
     padding: 14px 8px 14px 8px;
     background-color: rgb(230,230,230);
@@ -132,10 +132,10 @@
 .card {
     position: relative;
     top: 50px;
-    margin-left: 140px;
+    margin-left: 20px;
     height: auto;
     padding: 14px 8px 14px 8px;
-    background-color: rgb(230,230,230);
+    background-color: rgb(11, 33, 235);
     transition: all 0.3s;
     z-index: 1;
 }

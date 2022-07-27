@@ -5,7 +5,7 @@ if (!isset($_GET['target'])) {
 <div class="wrapper">
            <div class="main-pages">
  
-                <div class="mb-3">
+                <div class="row g-3 mb-3">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="d-block bg-white rounded shadow p-3">
                             <h2>SMAI 1 SUKOREJO</h2>
@@ -13,6 +13,69 @@ if (!isset($_GET['target'])) {
                         </div>
                     </div>
                 </div>
+                <div class="row g-3 mb-3">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="card p-2 shadow">
+                            <div class="d-flex align-items-center px-2">
+                                <i class="fa fa-users float-start fa-3x py-auto" aria-hidden="true"></i>
+                                <div class="card-body text-end">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="card-footer bg-white">
+                                <br>
+                                <small class="text-start fw-bold">Siswa</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="card p-2 shadow">
+                            <div class="d-flex align-items-center px-2">
+                                <i class="fa fa-calendar float-start fa-3x py-auto" aria-hidden="true"></i>
+                                <div class="card-body text-end">
+                                    
+                                </div>
+                            </div>
+                            <br>
+                            <div class="card-footer bg-white">
+                                <br>
+                                <small class="text-start fw-bold">Absen</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="card p-2 shadow">
+                            <div class="d-flex align-items-center px-2">
+                                <i class="fa fa-graduation-cap float-start fa-3x py-auto" aria-hidden="true"></i>
+                                <div class="card-body text-end">
+                                    
+                                </div>
+                            </div>
+                            <br>
+                            <div class="card-footer bg-white">
+                                <br>
+                                <small class="text-start fw-bold">Jurusan</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="card p-2 shadow">
+                            <div class="d-flex align-items-center px-2">
+                                <i class="fa fa-home fa-3x py-auto" aria-hidden="true"></i>
+                                <div class="card-body text-end">
+                                    
+                                </div>
+                            </div>
+                            <br>
+                            <div class="card-footer bg-white">
+                                <br>
+                                <small class="text-start fw-bold">Kelas</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <br><br><br><br>
                 <div class="row g-2">
                     <div class="col-12 col-lg-6">
                         <div class="d-block rounded shadow bg-white p-3">
@@ -27,6 +90,7 @@ if (!isset($_GET['target'])) {
                     </div>
                 </div>
                 <br><br><br><br>
+
                 Ip Adress anda: <?php echo $_SERVER ['REMOTE_ADDR'];?>
                 <br> 
                 Tanggal : <?php echo date("d/m/y");?>
