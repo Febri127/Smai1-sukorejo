@@ -80,8 +80,12 @@ if ($_SESSION['status_login'] != true) {
                 </nav>
             </div>
         </div>
-
         
+                
+    <div class="clearfix">&nbsp;</div>
+    <div class="container">   
+        <?php include_once "content.php"; ?>
+    </div>
 
     <div class="slider-background" id="sliders-background"></div>
     <script src="./dist/js/jquery.js"></script>
