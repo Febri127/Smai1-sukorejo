@@ -1,45 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>SMAI</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <title>SMA Ibrahimy 1</title>
 </head>
 <body>
-	<img class="wafe" src="images/user/wafe.png">
-	<div class="container">
-		<div class="img">
-			<img src="images/user/bg.svg">
-		</div>
-		<div class="login-content">
-			<form action="ceklogin.php" method="post">
-				<img src="images/user/user.png">
-				<h2 class="title">Welcome</h2>
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Username</h5>
-           		   		<input type="text" class="input" id="username" name="username">
-           		   </div>
-           		</div>
-           		<div class="input-div pass" >
-           		   <div class="i"> 
-           		    	<i class="fas fa-lock"></i>
-           		   </div>
-           		   <div class="div">
-           		    	<h5>Password</h5>
-           		    	<input type="password" class="input" id="password" name="password">
-            	   </div>
-            	</div>
-            	<a href="#">Forgot Password?</a>
-            	<input type="submit" class="btn" value="Login">
-            </form>
+    <form action="ceklogin.php" method="post">
+    <div class="input">
+        <h1>LOGIN</h1>
+        <div class="box-input">
+            <i class="fas fa-envelope-open-text"></i>
+            <input type="text" placeholder="Username" id="username" name="username">
+        </div>
+        <div class="box-input">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="password" id="password" name="password">
+        </div>
+        <button type="submit" name="login" class="btn-input">Login</button>
+            </p>
         </div>
     </div>
-    <script type="text/javascript" src="js/main.js"></script>
+</form>
 </body>
 </html>
