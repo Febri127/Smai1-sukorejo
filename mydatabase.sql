@@ -107,7 +107,7 @@ CREATE TABLE `bina` (
   `idbina` int(11) NOT NULL,
   `npm` varchar(15) NOT NULL,
   `nama` varchar(100) NOT NULL,
-  `sebaran_kelas` enum('sudah','proses', 'belum') NOT NULL
+  `sebaran_bina` enum('sudah','proses', 'belum') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 
