@@ -6,6 +6,10 @@
         <?php
         $db = __database();
         //buat header table
+        echo "<a class='btn btn-info btn-sm text-light' href='admin.php?target=sanksi&action=form'><i class='fa-solid fa-plus'></i> Tambah</a>
+        <a = class='btn btn-warning btn-sm text-dark' href='#'><i class='fa-solid fa-print'></i> PrintOut Data</a>
+        <a class='btn btn-primary btn-sm text-light' href='#'><i class='fa-solid fa-cloud-arrow-down'></i> Export Data</a>
+        <br><br>";
         echo "<a class='btn btn-primary btn-sm' href='admin.php?target=bina&action=form'>Tambah</a><br><br>";
         echo "<div class='table-responsive'>";
         echo "<table class='table table-striped table-bordered'>
