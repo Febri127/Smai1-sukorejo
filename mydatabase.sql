@@ -27,6 +27,23 @@ SET time_zone = "+00:00";
 -- Table structure for table `mahasiswa`
 --
 
+CREATE TABLE `siswa` (
+  `npm` varchar(15) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `kd_kelas` int(11) NOT NULL,
+  `kd_jurusan` int(11) NOT NULL,
+  `password` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `mahasiswa`
+--
+
+INSERT INTO `siswa` (`npm`, `nama`, `kd_kelas`, `kd_jurusan`, `password`) VALUES
+('12345', 'Samsul A', 5, 55201, '8cb2237d0679ca88db6464eac60da96345513964'),
+('2018023030', 'Yenie', 3, 59201, '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
+('2022010001', 'Lukman Fakih L', 3, 59201, '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
+
 -- --------------------------------------------------------
 
 --
@@ -107,12 +124,17 @@ CREATE TABLE `bina` (
   `idbina` int(11) NOT NULL,
   `npm` varchar(15) NOT NULL,
   `nama` varchar(100) NOT NULL,
+<<<<<<< HEAD
   `sebaran_bina` enum('sudah','proses', 'belum') NOT NULL
+=======
+  `sebaran_bina` enum('s','p', 'b') NOT NULL
+>>>>>>> 7e7e0219651273efbbae84f5aa9444a0babc5afa
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 
 
 CREATE TABLE `absen` (
+  `kd_absen` int(11) NOT NULL,
   `npm` varchar(15) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `kd_kelas` int(11) NOT NULL,
@@ -125,10 +147,15 @@ CREATE TABLE `absen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
+SET FOREIGN_KEY_CHECKS = 1;
+
 
 --
 -- Indexes for table `mahasiswa`
 --
+ALTER TABLE `siswa`
+  ADD PRIMARY KEY (`npm`) USING BTREE;
+
 --
 ALTER TABLE `bina`
   ADD PRIMARY KEY (`idbina`) USING BTREE;
@@ -137,7 +164,7 @@ ALTER TABLE `sanksi`
   ADD PRIMARY KEY (`idsanksi`) USING BTREE;
 --
 ALTER TABLE `absen`
-  ADD PRIMARY KEY (`npm`) USING BTREE;
+  ADD PRIMARY KEY (`kd_absen`) USING BTREE;
 -- Indexes for table `prodi`
 --
 ALTER TABLE `jurusan`
