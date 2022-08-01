@@ -79,16 +79,56 @@ if (!isset($_GET['target'])) {
                 <div class="row g-2">
                     <div class="col-12 col-lg-6">
                         <div class="d-block rounded shadow bg-white p-3">
-                            <canvas id="myChartOne"></canvas>
+                        <div class="card-header">
+                    <h4>Grafik Siswa</h4>
+                    <h5>SMA IBRAHIMY 1</h5>
+                     </div>
+                     <div class="card-body">
+                            <canvas id="myChartOne"></canvas> 
+                            <br>
+                            <h6>Data Pelanggaran Siswa</h6>   
+                        </div>
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
                         <div class="d-block rounded shadow bg-white p-3">
-                            <canvas id="myChartTwo"></canvas>
-
+                     <div class="card-header">
+                    <h4>Pembinaan Siswa</h4>
+                     </div>
+                    <div class="card-body">
+        <?php
+        $db = __database();
+        //buat header table
+        echo "<table class='table table-striped table-bordered'>
+        <thead>
+        <tr>
+        <th>No</th><th>ID</th><th>Npm</th><th>Nama</th><th>Pembinaan</th>
+        </tr>
+        </thead>
+        <tbody>";
+        // ambil data dari database
+        $join = [
+            "LEFT JOIN jurusan as p on p.kd_jurusan=s.kd_jurusan"
+        ];
+        $q = __ambil($db, "bina as a");
+        $no = 1;
+        while ($r = $q->fetch_array()) {
+            echo "<tr>
+            <td>" . $no . "</td>
+            <td>" . $r['idbina'] . "</td>
+            <td>" . $r['npm'] . "</td>
+            <td>" . $r['nama'] . "</td>
+            <td>" . $r['sebaran_bina'] . "</td>
+            </tr>";
+            $no++;
+        }
+        echo "</tbody></table></div>"; ?>
+    </div>
+</div>
+               
                         </div>
                     </div>
-                </div>
+            
                 <br><br><br><br>
 
                 Ip Adress anda: <?php echo $_SERVER ['REMOTE_ADDR'];?>
