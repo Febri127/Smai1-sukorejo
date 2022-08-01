@@ -46,7 +46,7 @@ if ($_SESSION['status_login'] != true) {
         <div class="slider" id="sliders">
             <div class="slider-head">
                 <div class="d-block pt-4 pb-3 px-3">
-                    <img src="./images/user/user.png" alt="user" class="slider-img-user mb-2">
+                    <img src="./images/user/logo.png" alt="user" class="slider-img-user mb-2">
                     <p class="fw-bold mb-0 lh-1 text-white">Bimbingan Konseling</p>
                     <small class="text-white">Sma Ibrahimy 1 Sukorejo</small>
                 </div>
