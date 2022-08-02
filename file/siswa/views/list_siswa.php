@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h4><i class="fa-solid fa-database"></i>Data Siswa</h4>
+        <h4><i class="fa-solid fa-user"></i>Data Siswa</h4>
     </div>
     <div class="card-body">
         <?php
