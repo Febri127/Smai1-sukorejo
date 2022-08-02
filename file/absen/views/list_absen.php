@@ -1,7 +1,7 @@
 
 <div class="card">
     <div class="card-header">
-        <h4><i class="fa-solid fa-database"></i>Rekap Absen Siswa</h4>
+        <h4><i class="fa-solid fa-calendar"></i>Rekap Absen Siswa</h4>
     </div>
     <div class="card-body">
         <?php
