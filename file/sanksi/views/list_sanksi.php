@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h4>Bentuk Sangsi</h4>
+        <h4><i class="fa-solid fa-gavel"></i>Bentuk Sangsi</h4>
     </div>
     <div class="card-body">
         <?php
