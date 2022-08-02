@@ -7,13 +7,14 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: sans-serif;
+    
 }
 
 .input {
     position: fixed;
     top: 50%;
     left: 700px;
-    transform: translate(-30%, -50%);
+    transform: translate(15%, -50%);
     background: rgba(255, 255, 255, 0.9);
     padding: 50px;
     width: 270px;
@@ -102,4 +103,33 @@ body {
 
 .bottom a:hover {
     text-decoration: underline;
+}
+@media(max-width: 1200px){
+    .input{
+        margin-left: -500px;
+    }
+    .input.active{
+        margin-left: 0px;
+    }
+    .input-background.active{
+        display: block;
+    }
+
+    .body{
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+@media(max-width: 576px){
+    .input{
+        position: fixed;
+        top: 52px;
+        left: 0px;
+        right: 0px;
+        width: 90%!important;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px!important;
+    }
 }
