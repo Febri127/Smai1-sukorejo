@@ -34,7 +34,6 @@ if ($_SESSION['status_login'] != true) {
                 <button class="btn btn-default" id="btn-slider" type="button">
                     <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
                 </button>
-                <a class="navbar-brand me-auto text-danger" href="#">BK<span class="text-warning">Smai</span></a>
                 <ul class="nav ms-auto">
                     <li class="nav-item dropstart">
                         
