@@ -37,6 +37,12 @@
                             B
                         </label>
                     </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sebaran_kelas" id="sebaran_kelas" value="C">
+                        <label class="form-check-label" for="sebaran_kelas">
+                            C
+                        </label>
+                    </div>
                 </div>
             </div>
 
