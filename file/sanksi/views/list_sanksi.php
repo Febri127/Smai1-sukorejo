@@ -31,7 +31,9 @@
             <td>" . $r['sanksi'] . "</td>
             <td>
             <a class='btn btn-success btn-sm' href='admin.php?target=sanksi&action=edit&id=" . $r['idsanksi'] ."'>Edit</a>
+            <i class='fa-solid fa-pen-to-square'></i>
             <a class='btn btn-danger btn-sm' href='admin.php?target=sanksi&action=delete&id=" . $r['idsanksi'] ."'>Hapus</a>
+            <i class='fa-solid fa-trash'></i>
             </td>
             </tr>";
             $no++;
