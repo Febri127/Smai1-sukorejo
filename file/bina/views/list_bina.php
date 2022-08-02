@@ -32,8 +32,12 @@
             <td>" . $r['nama'] . "</td>
             <td>" . $r['sebaran_bina'] . "</td>
             <td>
-            <a class='btn btn-success btn-sm' href='admin.php?target=bina&action=edit&id=" . $r['idbina'] ."'>Edit</a>
-            <a class='btn btn-danger btn-sm' href='admin.php?target=bina&action=delete&id=" . $r['idbina'] ."'>Hapus</a>
+            <a class='btn btn-success btn-sm' href='admin.php?target=bina&action=edit&id=" . $r['idbina'] ."'>
+            <i class='fa-solid fa-pen-to-square'></i>
+            </a>
+            <a class='btn btn-danger btn-sm' href='admin.php?target=bina&action=delete&id=" . $r['idbina'] ."'>
+            <i class='fa-solid fa-trash'></i>
+            </a>
             </td>
             </tr>";
             $no++;
