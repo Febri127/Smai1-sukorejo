@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h4>List Kelas</h4>
+        <h4>Bentuk Sangsi</h4>
     </div>
     <div class="card-body">
         <?php
