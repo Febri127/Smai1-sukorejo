@@ -73,10 +73,10 @@ if ($_SESSION['status_login'] != true) {
                         <i class="fa fa-calendar fa-lg box-icon" aria-hidden=""></i>Absen
                     </a>
                     <a class="nav-link px-3" <?php echo isset($_GET['target']) && $_GET['target'] == 'sanksi' ? "active" : ""; ?> href="<?php echo base_url(); ?>admin.php?target=sanksi">
-                        <i class="fa fa-gavel box-icon" aria-hidden="true"></i>sanksi
+                        <i class="fa fa-gavel fa-lg box-icon" aria-hidden="true"></i>Sanksi
                     </a>
                     <a class="nav-link px-3" <?php echo isset($_GET['target']) && $_GET['target'] == 'bina' ? "active" : ""; ?> href="<?php echo base_url(); ?>admin.php?target=bina">
-                        <i class="fa fa-user fa-lg box-icon" aria-hidden="true"></i>Pengurusan
+                    <i class="fa fa-people-roof fa-lg box-icon" aria-hidden="true"></i>Pengurusan
                     </a>
                     <hr class="soft my-1 bg-white">
                     <a class="nav-link px-3" href="<?php echo base_url(); ?>logout.php">
