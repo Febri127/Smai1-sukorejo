@@ -96,40 +96,39 @@ if (!isset($_GET['target'])) {
                     <h4>Pembinaan Siswa</h4>
                      </div>
                     <div class="card-body">
-        <?php
-        $db = __database();
-        //buat header table
-        echo "<table class='table table-striped table-bordered'>
-        <thead>
-        <tr>
-        <th>No</th><th>ID</th><th>Npm</th><th>Nama</th><th>Pembinaan</th>
-        </tr>
-        </thead>
-        <tbody>";
-        // ambil data dari database
-        $join = [
-            "LEFT JOIN jurusan as p on p.kd_jurusan=s.kd_jurusan"
-        ];
-        $q = __ambil($db, "bina as a");
-        $no = 1;
-        while ($r = $q->fetch_array()) {
-            echo "<tr>
-            <td>" . $no . "</td>
-            <td>" . $r['idbina'] . "</td>
-            <td>" . $r['npm'] . "</td>
-            <td>" . $r['nama'] . "</td>
-            <td>" . $r['sebaran_bina'] . "</td>
-            </tr>";
-            $no++;
-        }
-        echo "</tbody></table></div>"; ?>
-    </div>
-</div>
-               
-                        </div>
+                     <?php
+                     $db = __database();
+                     //buat header table
+                     echo "<table class='table table-striped table-bordered'>
+                    <thead>
+                    <tr>
+                    <th>No</th><th>ID</th><th>Npm</th><th>Nama</th><th>Pembinaan</th>
+                    </tr>
+                    </thead>
+                    <tbody>";
+                    // ambil data dari database
+                     $join = [
+                     "LEFT JOIN jurusan as p on p.kd_jurusan=s.kd_jurusan"
+                     ];
+                     $q = __ambil($db, "bina as a");
+                    $no = 1;
+                    while ($r = $q->fetch_array()) {
+                    echo "<tr>
+                    <td>" . $no . "</td>
+                    <td>" . $r['idbina'] . "</td>
+                    <td>" . $r['npm'] . "</td>
+                    <td>" . $r['nama'] . "</td>
+                    <td>" . $r['sebaran_bina'] . "</td>
+                    </tr>";
+                    $no++;
+                    }
+                            echo "</tbody></table></div>"; ?>
                     </div>
-            
-                <br><br><br><br>
+                </div>
+            </div>
+        </div>
+                
+                    <br><br><br><br>
 
                 Ip Adress anda: <?php echo $_SERVER ['REMOTE_ADDR'];?>
                 <br> 
