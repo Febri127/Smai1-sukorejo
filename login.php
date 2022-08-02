@@ -8,8 +8,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <title>SMA Ibrahimy 1</title>
 </head>
+<style>
+    h4{
+        text-align: center;
+        margin-top: 10%;
+        color: blue;
+        font-size: 50px;
+        display: center;
+    }
+</style>
 <body>
     <form action="ceklogin.php" method="post">
+    <h4>SMA IBRAHIMY 1 SUKOREJO</h4>
     <div class="input">
         <h1>LOGIN</h1>
         <div class="box-input">
