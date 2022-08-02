@@ -12,7 +12,7 @@ body {
 .input {
     position: fixed;
     top: 50%;
-    left: 610px;
+    left: 700px;
     transform: translate(-30%, -50%);
     background: rgba(255, 255, 255, 0.9);
     padding: 50px;
